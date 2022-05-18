@@ -13,3 +13,11 @@ job('job-2'){
 
 }
 
+
+job('job-3'){
+   steps{
+       shell ('echo hello dell')
+   }
+
+}
+
