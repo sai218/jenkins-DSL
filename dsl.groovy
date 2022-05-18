@@ -1,7 +1,7 @@
 job('dsljob-1'){
-                steps{
-                git 'https://github.com/sai218/sai-login.git'
-            }
+    steps{
+         git ('checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/sai218/sai-login.git']]])')
+    }
         
 
 }
