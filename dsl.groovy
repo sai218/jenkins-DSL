@@ -4,11 +4,12 @@
         git("https://github.com/sai218/sai-login.git", "master")
     }
 
-    steps{
-       sh 'mvn clean install '
+    configure { node ->
+        // === Configure the Maven builder ===
+        node / methodMissing('goals', 'clean install') // Specifies the goals to execute, such as "clean install" or "deploy"
+    
    }
 
-    
    }
 
 
