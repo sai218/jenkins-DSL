@@ -1,13 +1,9 @@
 job('dsljob-1'){
-    stages{
-        
-        stage('git checkout'){
-
-            steps{
+                steps{
                 git 'https://github.com/sai218/sai-login.git'
             }
-        }
+        
 
-            }
 }
+
    
