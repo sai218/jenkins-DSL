@@ -3,9 +3,9 @@ job('my-job') {
         git("https://github.com/sai218/sai-login.git", "master")
     }
     triggers {
-        scm('H/15 * * * *')
+        scm('H/2 * * * *')
     }
     steps {
-        maven('-e clean test')
+        maven('-e clean install')
     }
 }
